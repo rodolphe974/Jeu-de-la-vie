@@ -12,7 +12,7 @@ public class Panneau extends JPanel {
 	private int posX = 0;
 	private int posY = 0;
 	private String Text  = "";
-	private int size;
+	private int size = 500;
 	private boolean tab[][]= new boolean[size][size];
 	private boolean newtab[][]= new boolean[size][size];
 
@@ -51,11 +51,11 @@ public class Panneau extends JPanel {
 			}
 		}
 	}
-	public void setSiz(int size){
-		this.size = size;
+	public void setSiz(int csize){
+		this.size = csize;
 	}
 	public int getSiz() {
-		return size;
+		return this.size;
 	}
 	public void setText(String Text) {
 		this.Text = Text;
@@ -77,9 +77,9 @@ public class Panneau extends JPanel {
 		this.posY = posY;
 	} 
 	public void setTab(boolean extab[][]) {
-		for (int i = 0; i<size; i++)
+		for (int i = 0; i<this.size; i++)
 		{
-			for(int j=0; j< size; j++)
+			for(int j=0; j< this.size; j++)
 			{
 				this.tab[j][i]=extab[j][i];
 			}
