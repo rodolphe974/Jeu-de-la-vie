@@ -12,7 +12,7 @@ public class Panneau extends JPanel {
 	private int posX = 0;
 	private int posY = 0;
 	private String Text  = "";
-	private int size = 1000;
+	private int size;
 	private boolean tab[][]= new boolean[size][size];
 	private boolean newtab[][]= new boolean[size][size];
 
