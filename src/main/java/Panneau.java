@@ -51,6 +51,9 @@ public class Panneau extends JPanel {
 			}
 		}
 	}
+	public void setSiz(int size){
+		this.size = size;
+	}
 	public int getSiz() {
 		return size;
 	}

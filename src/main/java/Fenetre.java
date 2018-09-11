@@ -10,9 +10,8 @@ public class Fenetre extends JFrame{
 	private Panneau pan = new Panneau();
 	private String Text = "";
 
-
 	//initialiser les valeurs du jeu
-	private int size = pan.getSiz(); //taille du monde  
+	private int size; //taille du monde
 	private boolean tab[][] = new boolean[this.size][this.size];	//tableau du monde
 	private boolean newtab[][] = new boolean[this.size][this.size]; //tableau du nouveau monde
 	private boolean flag = true ;
@@ -21,7 +20,7 @@ public class Fenetre extends JFrame{
 		this.setTitle("It's alive !!!");
 		this.setSize(size, size);
 		//this.setPreferredSize(new Dimension(500,500));
-		
+		pan.setSiz(size);
 		this.pack();
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		this.setLocationRelativeTo(null);
@@ -73,7 +72,9 @@ public class Fenetre extends JFrame{
 	} 
 
 	//////////////////////////////// POUR LE JEU DE LA VIE //////////////////////////////////
-	
+	public void setSiz(int size){
+		this.size = size;
+	}
 	//	Methode pour tester des cellules adjacente 
 	public static boolean isAlive (boolean Tab[][], int y, int x) {
 
